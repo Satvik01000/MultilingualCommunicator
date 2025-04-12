@@ -1,7 +1,7 @@
 package com.hackathon.hackhazards.multilingualcommunicator.Controller;
 
 import com.hackathon.hackhazards.multilingualcommunicator.DTO.TextTranslateRequestDTO;
-import com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslateService;
+import com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslateService.TextTranslateService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

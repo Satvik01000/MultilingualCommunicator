@@ -1,4 +1,4 @@
-package com.hackathon.hackhazards.multilingualcommunicator.Service;
+package com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslateService;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -17,8 +17,10 @@ import java.util.Map;
 public class TextTranslateServiceImple implements TextTranslateService {
 
     private final RestTemplate restTemplate;
-    private static final String apiUrl = "https://api.groq.com/openai/v1/chat/completions";
-    private static final String apiKey = "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";
+    @Value("${API_URL}")
+    private String apiUrl;
+    @Value("${API_KEY}")
+    private String apiKey;
 
     public TextTranslateServiceImple(RestTemplate restTemplate){
         this.restTemplate = restTemplate;

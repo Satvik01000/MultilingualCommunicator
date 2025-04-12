@@ -1,4 +1,4 @@
-package com.hackathon.hackhazards.multilingualcommunicator.Service;
+package com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslateService;
 
 import org.springframework.http.ResponseEntity;
 
