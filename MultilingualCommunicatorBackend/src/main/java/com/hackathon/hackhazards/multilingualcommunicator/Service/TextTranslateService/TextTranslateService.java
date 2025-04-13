@@ -3,5 +3,5 @@ package com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslate
 import org.springframework.http.ResponseEntity;
 
 public interface TextTranslateService {
-    ResponseEntity<String> translate(String prompt, String outputLang);
+    ResponseEntity<String> textTranslate(String prompt, String outputLang);
 }

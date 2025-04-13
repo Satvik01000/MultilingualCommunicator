@@ -17,7 +17,7 @@ import java.util.Map;
 public class TextTranslateServiceImple implements TextTranslateService {
 
     private final RestTemplate restTemplate;
-    @Value("${API_URL}")
+    @Value("${API_URL_TEXT}")
     private String apiUrl;
     @Value("${API_KEY}")
     private String apiKey;
@@ -27,7 +27,7 @@ public class TextTranslateServiceImple implements TextTranslateService {
     }
 
     @Override
-    public ResponseEntity<String> translate(String prompt, String outputLang) {
+    public ResponseEntity<String> textTranslate(String prompt, String outputLang) {
         HttpHeaders headers = new HttpHeaders();
         headers.setContentType(MediaType.APPLICATION_JSON);
         headers.setBearerAuth(apiKey);
