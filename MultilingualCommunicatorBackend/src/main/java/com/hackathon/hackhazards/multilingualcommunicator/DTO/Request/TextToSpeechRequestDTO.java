@@ -1,4 +1,4 @@
-package com.hackathon.hackhazards.multilingualcommunicator.DTO;
+package com.hackathon.hackhazards.multilingualcommunicator.DTO.Request;
 
 import lombok.Data;
 

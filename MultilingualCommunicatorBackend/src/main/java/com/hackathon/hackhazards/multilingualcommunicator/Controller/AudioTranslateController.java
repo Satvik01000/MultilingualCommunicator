@@ -1,8 +1,8 @@
 package com.hackathon.hackhazards.multilingualcommunicator.Controller;
 
-import com.hackathon.hackhazards.multilingualcommunicator.DTO.AudioTranslationRequestDTO;
-import com.hackathon.hackhazards.multilingualcommunicator.DTO.AudioTranslationSpeechRequestDTO;
-import com.hackathon.hackhazards.multilingualcommunicator.DTO.TextToSpeechRequestDTO;
+import com.hackathon.hackhazards.multilingualcommunicator.DTO.Request.AudioTranslationRequestDTO;
+import com.hackathon.hackhazards.multilingualcommunicator.DTO.Request.AudioTranslationSpeechRequestDTO;
+import com.hackathon.hackhazards.multilingualcommunicator.DTO.Request.TextToSpeechRequestDTO;
 import com.hackathon.hackhazards.multilingualcommunicator.Service.AudioTranslateService.AudioTranslateService;
 import com.hackathon.hackhazards.multilingualcommunicator.Service.TextToSpeechService.TextToSpeechService;
 import org.springframework.beans.factory.annotation.Autowired;
