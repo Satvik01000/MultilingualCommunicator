@@ -16,9 +16,9 @@ public class TextTranslateController {
     public TextTranslateController(TextTranslateService translateService) {
         this.translateService = translateService;
     }
-    @PostMapping
+    @PostMapping("/translate")
     public ResponseEntity<String> translate(@RequestBody TextTranslateRequestDTO translateRequestDTO){
-        return translateService.translate(translateRequestDTO.getInput(), translateRequestDTO.getOutputLang());
+        return translateService.textTranslate(translateRequestDTO.getInput(), translateRequestDTO.getOutputLang());
     }
 
 }
