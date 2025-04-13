@@ -1,7 +1,7 @@
 package com.hackathon.hackhazards.multilingualcommunicator.Controller;
 
-import com.hackathon.hackhazards.multilingualcommunicator.DTO.LoginDTO;
-import com.hackathon.hackhazards.multilingualcommunicator.DTO.PasswordChangeRequestDTO;
+import com.hackathon.hackhazards.multilingualcommunicator.DTO.Request.LoginDTO;
+import com.hackathon.hackhazards.multilingualcommunicator.DTO.Request.PasswordChangeRequestDTO;
 import com.hackathon.hackhazards.multilingualcommunicator.Entity.User;
 import com.hackathon.hackhazards.multilingualcommunicator.Repository.UserRepo;
 import com.hackathon.hackhazards.multilingualcommunicator.Service.UserService.UserService;
