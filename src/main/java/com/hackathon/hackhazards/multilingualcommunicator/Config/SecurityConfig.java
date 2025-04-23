@@ -1,6 +1,6 @@
 package com.hackathon.hackhazards.multilingualcommunicator.Config;
 
-import com.hackathon.hackhazards.multilingualcommunicator.Fileter.JwtFilter;
+import com.hackathon.hackhazards.multilingualcommunicator.Filter.JwtFilter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;

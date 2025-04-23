@@ -18,9 +18,9 @@ import java.util.*;
 public class VisionTranslationServiceImple implements VisionTranslationService {
 
     @Value("${API_URL_IMAGE}")
-    private String GROQ_API_URL;
+    private String API_URL_IMAGE;
     @Value("${API_KEY}")
-    private String GROQ_API_KEY;
+    private String API_KEY;
     @Value("${IMAGE_DIRECTORY}")
     private String uploadPath;
 
@@ -56,13 +56,13 @@ public class VisionTranslationServiceImple implements VisionTranslationService {
         requestBody.put("messages", List.of(message));
 
         HttpHeaders headers = new HttpHeaders();
-        headers.set("Authorization", "Bearer " + GROQ_API_KEY);
+        headers.set("Authorization", "Bearer " + API_KEY);
         headers.setContentType(MediaType.APPLICATION_JSON);
 
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
 
         RestTemplate restTemplate = new RestTemplate();
-        String response = restTemplate.exchange(GROQ_API_URL, HttpMethod.POST, entity, String.class).getBody();
+        String response = restTemplate.exchange(API_URL_IMAGE, HttpMethod.POST, entity, String.class).getBody();
         String translatedText = new ObjectMapper()
                 .readTree(response)
                 .get("choices")
