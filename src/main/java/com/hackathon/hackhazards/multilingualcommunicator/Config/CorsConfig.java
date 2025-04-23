@@ -16,7 +16,9 @@ public class CorsConfig {
                 registry.addMapping("/**")
                         .allowedOrigins(
                                 "http://127.0.0.1:5500",
-                                "https://cfbe-2409-40d4-28-48ca-c029-a65b-3634-42d2.ngrok-free.app"
+                                "https://cfbe-2409-40d4-28-48ca-c029-a65b-3634-42d2.ngrok-free.app",
+                                "http://localhost:3000",
+                                "http://localhost:3003/"
                         )
                         .allowedMethods("*")
                         .allowedHeaders("*")

@@ -77,21 +77,12 @@ public class AudioTranslateServiceImple implements AudioTranslateService{
             // Step 2: Parse translated text
             ObjectMapper objectMapper = new ObjectMapper();
             String bodyAsString = translationResponse.getBody().toString();
-
             String translatedText;
 
             if (outputLang.equalsIgnoreCase("English")) {
-                // If it's English, parse the direct Whisper response
                 translatedText = objectMapper.readTree(bodyAsString).get("text").asText();
             } else {
-                // If translated, parse Groq-style chat completion response
-                translatedText = objectMapper
-                        .readTree(bodyAsString)
-                        .get("choices")
-                        .get(0)
-                        .get("message")
-                        .get("content")
-                        .asText();
+                translatedText = bodyAsString;
             }
 
             return textToSpeechService.textToSpeech(translatedText, voice);

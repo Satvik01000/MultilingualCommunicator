@@ -1,5 +1,6 @@
 package com.hackathon.hackhazards.multilingualcommunicator.Service.ScanTranslationService;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
@@ -61,7 +62,15 @@ public class VisionTranslationServiceImple implements VisionTranslationService {
         HttpEntity<Map<String, Object>> entity = new HttpEntity<>(requestBody, headers);
 
         RestTemplate restTemplate = new RestTemplate();
-        return restTemplate.exchange(GROQ_API_URL, HttpMethod.POST, entity, String.class);
+        String response = restTemplate.exchange(GROQ_API_URL, HttpMethod.POST, entity, String.class).getBody();
+        String translatedText = new ObjectMapper()
+                .readTree(response)
+                .get("choices")
+                .get(0)
+                .get("message")
+                .get("content")
+                .asText();
+        return ResponseEntity.ok().body(translatedText);
     }
 
 }

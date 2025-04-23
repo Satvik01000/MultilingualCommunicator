@@ -2,7 +2,6 @@ package com.hackathon.hackhazards.multilingualcommunicator.Service.TextTranslate
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.hackathon.hackhazards.multilingualcommunicator.Entity.Text;
 import com.hackathon.hackhazards.multilingualcommunicator.Repository.TextRepo;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -19,14 +18,12 @@ import java.util.Map;
 
 @Service
 public class TextTranslateServiceImple implements TextTranslateService {
-    private final TextRepo textRepo;
     private final RestTemplate restTemplate;
     @Value("${API_URL_TEXT}")
     private String apiUrl;
     @Value("${API_KEY}")
     private String apiKey;
-    public TextTranslateServiceImple(TextRepo textRepo, RestTemplate restTemplate) {
-        this.textRepo = textRepo;
+    public TextTranslateServiceImple(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
     }
 
