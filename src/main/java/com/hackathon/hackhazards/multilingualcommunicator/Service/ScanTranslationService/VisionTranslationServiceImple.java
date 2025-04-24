@@ -21,8 +21,6 @@ public class VisionTranslationServiceImple implements VisionTranslationService {
     private String API_URL_IMAGE;
     @Value("${API_KEY}")
     private String API_KEY;
-    @Value("${IMAGE_DIRECTORY}")
-    private String uploadPath;
 
     public ResponseEntity<?> imageTranslate(MultipartFile file, String outputLang) throws IOException {
         byte[] imageBytes = file.getBytes();
