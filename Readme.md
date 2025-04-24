@@ -56,7 +56,7 @@ Providing a user-friendly experience for anyone, anywhere.
 ## 🛠️ Tech Stack
 
 ### Core Technologies Used:
-- Frontend: Next.js, Tailwind CSS, Shadcn
+- Frontend: Next.js, Tailwind CSS, Shadcn, Material UI
 - Backend: Spring Boot, Spring Data JPA, Spring Security, JWT Auth
 - Database: MySQL
 - APIs: Groq text, audio, and vision API's
