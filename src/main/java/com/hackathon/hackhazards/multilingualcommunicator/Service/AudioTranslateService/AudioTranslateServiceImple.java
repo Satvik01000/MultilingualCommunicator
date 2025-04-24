@@ -24,7 +24,7 @@ public class AudioTranslateServiceImple implements AudioTranslateService{
     @Value("${API_URL_AUDIO}")
     private String apiUrlAudio;
 
-    @Value("${API_URL_AUDIO_Transcribe}")
+    @Value("${API_URL_AUDIO_TRANSCRIBE}")
     private String apiUrlAudioTranscribe;
 
     @Value("${API_KEY}")
