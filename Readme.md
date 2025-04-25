@@ -104,6 +104,12 @@ Add images, GIFs, or screenshots if helpful!
 
 ### ✅ Requirements
 
+#### Frontend
+- First use npm install
+- Then npm run dev
+
+#### Backend
+
 - [Docker](https://www.docker.com/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - A `.env` file with necessary environment variables (see below)
